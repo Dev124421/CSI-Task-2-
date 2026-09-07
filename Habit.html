@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTrack Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside>
+    <h1>Fit<span>Track</span></h1>
+    <nav>
+      <a href="home.html">Dashboard</a>
+      <a href="task.html">Tasks</a>
+      <a href="#habits">Habits</a>
+      <a href="wellness.html">Wellness</a>
+      <a href="home.html">Summary</a>
+    </nav>
+    <p class="small">Small steps every day.</p>
+  </aside>
+
+  <main>
+    <header id="dashboard">
+      <div><p class="eyebrow" id="today"></p><h2>Good day, keep moving!</h2></div>
+      <button id="resetBtn" class="outline">Reset today</button>
+    </header>
+
+    <section class="cards" aria-label="Daily overview">
+      <article class="card">
+        <p>Task progress</p><strong id="taskProgress">0%</strong><div class="bar"><i id="taskBar"></i></div>
+      </article>
+      <article class="card">
+        <p>Habit progress</p><strong id="habitProgress">0%</strong><div class="bar green"><i id="habitBar"></i></div>
+      </article>
+      <article class="card">
+        <p>Water intake</p><strong id="waterTotal">0 ml</strong><button id="waterBtn">+ 250 ml</button>
+      </article>
+      <article class="card">
+        <p>Calories today</p><strong id="calorieTotal">0 kcal</strong><div class="inline"><input id="calorieInput" type="number" placeholder="Calories"><button id="calorieBtn">Add</button></div>
+      </article>
+    </section>
+
+    <section class="grid2" id="habits">
+      <article class="panel2">
+        <div class="section-title">
+            <div>
+                <p class="eyebrow">Build consistency</p><h3>Habit tracker</h3>
+            </div>
+            <button id="addHabitBtn">+ Add habit</button>
+        </div>
+        <form id="habitForm" class="add-form hidden"> <input id="habitName" required placeholder="Habit name"> <select id="habitCategory"> <option>Workout</option> <option>Fitness</option><option>Cardio</option><option>Mental Wellness</option></select><button>Add</button></form>
+        <ul id="habitList" class="habit-list"></ul>
+      </article>
+    </section>
+
+    </main>
+    <script src="fit.js"></script>
+</body>
+</html>

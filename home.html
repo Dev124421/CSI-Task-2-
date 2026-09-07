@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrcak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside>
+    <h1>Fit<span>Track</span></h1>
+    <nav>
+      <a href="home.html">Dashboard</a>
+      <a href="task.html">Tasks</a>
+      <a href="Habit.html">Habits</a>
+      <a href="wellness.html">Wellness</a>
+      <a href="#summary">Summary</a>
+    </nav>
+    <p class="small">Small steps every day.</p>
+  </aside>
+
+  <main>
+    <header id="dashboard">
+      <div><p class="eyebrow" id="today"></p><h2>Good day, keep moving!</h2></div>
+      <button id="resetBtn" class="outline">Reset today</button>
+    </header>
+
+    <section class="cards" aria-label="Daily overview">
+      <article class="card">
+        <p>Task progress</p><strong id="taskProgress">0%</strong><div class="bar"><i id="taskBar"></i></div>
+      </article>
+      <article class="card">
+        <p>Habit progress</p><strong id="habitProgress">0%</strong><div class="bar green"><i id="habitBar"></i></div>
+      </article>
+      <article class="card">
+        <p>Water intake</p><strong id="waterTotal">0 ml</strong><button id="waterBtn">+ 250 ml</button>
+      </article>
+      <article class="card">
+        <p>Calories today</p><strong id="calorieTotal">0 kcal</strong><div class="inline"><input id="calorieInput" type="number" placeholder="Calories"><button id="calorieBtn">Add</button></div>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="panel timer-panel">
+        <p class="eyebrow">Focus session</p><h3>Pomodoro timer</h3>
+        <select id="timerTask"><option value="">Choose a task</option></select>
+        <div id="timer">25:00</div>
+        <button id="timerBtn">Start focus</button><button id="timerReset" class="outline">Reset</button>
+        <p id="timerMessage" class="small"></p>
+      </article>
+    
+      <article class="panel"><p class="eyebrow">Monthly habit</p><h3>Habit activity</h3>
+        <div id="activityGraph" class="activity-graph"></div>
+        <p class="small">Darker squares mean more completed habits.</p></article>
+    </section>
+
+    <section class="grid2" id="wellness">
+      <article class="panel2">
+        <p class="eyebrow">A little inspiration</p>
+        <h3>Today's quote</h3>
+        <blockquote id="quote">Loading a fresh quote...</blockquote>
+        <p id="quoteAuthor" class="small"></p>
+        <button id="newQuote">New quote</button><button id="saveQuote" class="outline">Save quote</button>
+        <div id="savedQuotes" class="saved-quotes"></div></article>
+    </section>
+
+        <section class="panel" id="summary">
+      <p class="eyebrow">This week</p><h3>Weekly summary</h3>
+      <div class="summary-grid">
+        <div>
+          <strong id="summaryTasks">0</strong><span>tasks completed</span>
+        </div>
+      <div>
+        <strong id="summaryHabits">0</strong><span>habits completed</span>
+      </div>
+      <div>
+        <strong id="summaryWater">0 ml</strong><span>water consumed</span>
+      </div>
+      <div>
+        <strong id="summarySleep">0 h</strong><span>average sleep</span>
+      </div>
+    </div>
+    </section><br>
+    <div class="alert warning" role="status"><b>Caution : </b>The site you are trying to visit is still under construction.</div>
+
+  </main>
+  <script src="fit.js"></script>
+</body>
+</html>
